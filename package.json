@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "client": "npm  start --prefix client ",
     "myapp": "concurrently \"npm run server\" \"npm run client\""
   },
@@ -13,17 +14,17 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "config": "^3.3.6",
+    "config": "^3.3.9",
     "cors": "^2.8.5",
-    "express": "^4.17.2",
-    "express-validator": "^6.14.0",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.3",
     "gravatar": "^1.8.2",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.1.5",
+    "mongoose": "^6.9.0",
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "concurrently": "^7.0.0",
-    "nodemon": "^2.0.15"
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20"
   }
 }

@@ -272,6 +272,7 @@ router.delete("/education/:edu_id", tokenChecker, async (req, res) => {
 
 // Getting github Repos
 router.get("/github/:username", async (req, res) => {
+  
   try {
     const options = {
       uri: `https://api.github.com/users/${
@@ -283,11 +284,12 @@ router.get("/github/:username", async (req, res) => {
       headers: { "user-agent": "node.js" },
     };
 
-    request(options, (error, response, body) => {
+    request(options,  (error, response, body) => {
       if (error) console.error(error);
       if (response.statusCode != 200) {
         return res.status(404).json({ error: [{msg:"No github profile found." }]});
       }
+      // console.log("sending data of github");
       res.json(JSON.parse(body));
     });
   } catch (error) {

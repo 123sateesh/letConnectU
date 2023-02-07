@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 const config   = require('config')
 const db  = config.get('mongoURL');
+// let mongoURL = "mongodb+srv://skSocial:GWjQxQviGI0KKkEL/letsConnectDB@myfirstcluster.byfzg.mongodb.net/?retryWrites=true&w=majority";
 
  const connectDB = async ()=>{
  try {
-     await mongoose.connect(db,{
+     await mongoose.connect( db,{
        
      });
      console.log("MongoDB has been connected.")

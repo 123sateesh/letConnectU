@@ -1,0 +1,6 @@
+{
+    "mongoURL": "mongodb+srv://skSocial:GWjQxQviGI0KKkEL@myfirstcluster.byfzg.mongodb.net/socialDB?retryWrites=true&w=majority",
+    "secureKey": "Sateesh",
+    "githubClientId":"a650b723b58c6f18b506",
+    "githubSecret":"83c75141d86cae7edd4eac6efcb281074a0569b7"
+}
